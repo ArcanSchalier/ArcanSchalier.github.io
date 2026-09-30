@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Belonging Lens™ · Arcan Schalier Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,opsz,wght@0,5..1200,400;0,5..1200,500;0,5..1200,600;1,5..1200,400;1,5..1200,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: oklch(15.5% 0.012 55);
+  --bg-2: oklch(18.5% 0.014 55);
+  --bg-3: oklch(22% 0.016 58);
+  --line: oklch(29% 0.016 58);
+  --line-soft: oklch(24% 0.014 58);
+  --ink: oklch(93% 0.012 75);
+  --ink-2: oklch(78% 0.016 70);
+  --ink-3: oklch(62% 0.016 65);
+  --promise: oklch(80% 0.11 80);
+  --promise-deep: oklch(66% 0.11 72);
+  --memory: oklch(80% 0.065 165);
+  --memory-deep: oklch(64% 0.07 165);
+  --on-promise: oklch(20% 0.03 70);
+  --serif: "Playfair Display", "Iowan Old Style", Georgia, serif;
+  --sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:64px; --s9:96px; --s10:144px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --wrap: 1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;font-optical-sizing:auto;-webkit-font-smoothing:antialiased;letter-spacing:0.005em}
+h1,h2,h3{font-family:var(--serif);font-weight:500;text-wrap:balance;letter-spacing:-0.01em}
+p{text-wrap:pretty}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--promise);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--s5)}
+.eyebrow{font-size:0.75rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)}
+.num{font-variant-numeric:tabular-nums}
+.top{display:flex;justify-content:space-between;align-items:center;gap:var(--s4);padding:var(--s5) 0;border-bottom:1px solid var(--line-soft)}
+.mark{display:flex;align-items:baseline;gap:var(--s3)}
+.mark b{font-family:var(--serif);font-weight:500;font-size:1.125rem;letter-spacing:0}
+.mark span{font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)}
+.prepared{font-size:0.875rem;color:var(--ink-2)}
+.prepared em{font-style:normal;color:var(--ink)}
+.hero{padding:var(--s9) 0 var(--s8);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,0.85fr);gap:var(--s8);align-items:end}
+.hero h1{font-size:clamp(2.6rem,6.2vw,5.4rem);line-height:1.02;font-weight:400}
+.hero h1 i{font-style:italic;color:var(--promise)}
+.hero .lede{margin-top:var(--s6);font-size:1.25rem;line-height:1.55;color:var(--ink-2);max-width:40ch}
+.facts{border-top:1px solid var(--line);padding-top:var(--s5);display:grid;gap:var(--s4)}
+.fact{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s4);padding-bottom:var(--s4);border-bottom:1px solid var(--line-soft)}
+.fact dt{color:var(--ink-3);font-size:0.875rem}
+.fact dd{font-family:var(--serif);font-size:1.5rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s6)}
+.btn{display:inline-flex;align-items:center;gap:var(--s2);min-height:48px;padding:0 var(--s5);border-radius:999px;font:600 0.9375rem/1 var(--sans);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .2s var(--ease),background-color .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease)}
+.btn-primary{background:var(--promise);color:var(--on-promise)}
+.btn-primary:hover{background:oklch(85% 0.1 82)}
+.btn-primary:active{transform:translateY(1px)}
+.btn-ghost{border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink-3)}
+section.block{padding:var(--s9) 0;border-top:1px solid var(--line-soft)}
+.head{display:grid;grid-template-columns:200px minmax(0,1fr);gap:var(--s6);margin-bottom:var(--s7)}
+.head h2{font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.1;max-width:22ch}
+.head p{margin-top:var(--s4);color:var(--ink-2);max-width:60ch}
+.decision{padding:var(--s10) 0 var(--s9)}
+.decision blockquote{font-family:var(--serif);font-size:clamp(1.7rem,3.8vw,3.1rem);line-height:1.2;max-width:26ch;font-weight:400}
+.decision blockquote em{color:var(--promise);font-style:italic}
+.decision p{margin-top:var(--s6);max-width:58ch;color:var(--ink-2)}
+.map{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:var(--s8);align-items:start}
+.legend{display:flex;gap:var(--s5);flex-wrap:wrap;margin-bottom:var(--s5);font-size:0.875rem;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:var(--s2)}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-block}
+.dot.p{background:var(--promise)} .dot.m{background:var(--memory)}
+.rows{list-style:none;display:grid;gap:0}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) 56px;align-items:center;gap:var(--s4);padding:var(--s3) var(--s3);border-radius:10px;cursor:pointer;border:1px solid transparent;transition:background-color .2s var(--ease),border-color .2s var(--ease);background:none;color:inherit;font:inherit;text-align:left;width:100%}
+.row:hover{background:var(--bg-2)}
+.row[aria-pressed="true"]{background:var(--bg-2);border-color:var(--line)}
+.row .label{font-weight:500}
+.track{position:relative;height:28px}
+.track::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--line)}
+.span{position:absolute;top:50%;height:3px;transform:translateY(-50%);border-radius:2px;background:var(--line);transition:left .6s var(--ease),width .6s var(--ease)}
+.row[aria-pressed="true"] .span{background:oklch(50% 0.05 75)}
+.pin{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;transform:translate(-50%,-50%) scale(0);transition:transform .6s var(--ease),left .6s var(--ease)}
+.pin.p{background:var(--promise)} .pin.m{background:var(--memory);box-shadow:0 0 0 3px var(--bg)}
+.map.live .pin{transform:translate(-50%,-50%) scale(1)}
+.gapv{font-size:0.875rem;text-align:right;color:var(--ink-3)}
+.gapv.big{color:var(--promise)}
+.finding{position:sticky;top:var(--s5);border:1px solid var(--line);border-radius:16px;padding:var(--s6);background:var(--bg-2)}
+.finding .eyebrow{margin-bottom:var(--s4)}
+.finding h3{font-size:1.75rem;line-height:1.15;margin-bottom:var(--s5)}
+.finding dl{display:grid;gap:var(--s4)}
+.finding dt{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:var(--s1)}
+.finding dd{color:var(--ink)}
+.finding dd.move{color:var(--memory)}
+.note{margin-top:var(--s5);font-size:0.8125rem;color:var(--ink-3)}
+.swap{animation:fadeIn .45s var(--ease)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.dims{list-style:none;border-top:1px solid var(--line)}
+.dims li{border-bottom:1px solid var(--line)}
+.dims button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:64px minmax(0,1fr) 32px;gap:var(--s4);align-items:baseline;width:100%;padding:var(--s5) 0;cursor:pointer}
+.dims button:focus-visible{outline:2px solid var(--promise);outline-offset:4px}
+.dims .n{font-family:var(--serif);font-size:1.25rem;color:var(--ink-3)}
+.dims .t{font-family:var(--serif);font-size:clamp(1.35rem,2.4vw,1.85rem)}
+.dims .plus{justify-self:end;font-size:1.5rem;color:var(--ink-3);transition:transform .3s var(--ease)}
+.dims li.open .plus{transform:rotate(45deg);color:var(--promise)}
+.dims .body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.dims li.open .body{grid-template-rows:1fr}
+.dims .body>div{overflow:hidden}
+.dims .inner{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1fr);gap:var(--s4) var(--s6);padding:0 0 var(--s6)}
+.dims .inner p{color:var(--ink-2)}
+.dims .inner h4{font:600 0.75rem/1.4 var(--sans);letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:var(--s2)}
+.deliver{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s8)}
+.deliver ul{list-style:none;display:grid;gap:var(--s4)}
+.deliver li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:var(--s3);align-items:baseline}
+.deliver li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--promise);transform:translateY(-2px)}
+.deliver li b{font-weight:600}
+.deliver .confidence{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:var(--s6)}
+.deliver .confidence h3{font-size:1.5rem;margin-bottom:var(--s4)}
+.deliver .confidence ol{padding-left:var(--s5);display:grid;gap:var(--s2);color:var(--ink-2)}
+.deliver .confidence p{margin-top:var(--s4);color:var(--ink-2)}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--line);position:relative}
+.day{padding:var(--s5) var(--s4) 0 0;position:relative}
+.day::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--ink-3)}
+.day.hl::before{background:var(--promise);border-color:var(--promise)}
+.day .d{font-family:var(--serif);font-size:1.5rem;margin-bottom:var(--s2)}
+.day p{font-size:0.9375rem;color:var(--ink-2);max-width:24ch}
+.after{margin-top:var(--s6);color:var(--ink-2);max-width:62ch}
+.fit{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:var(--s8);align-items:start}
+.qs{list-style:none;display:grid;gap:var(--s3)}
+.q{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s4);align-items:center;padding:var(--s4) 0;border-bottom:1px solid var(--line-soft)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{all:unset;cursor:pointer;min-width:52px;min-height:36px;display:grid;place-items:center;padding:0 var(--s3);border-radius:999px;font-size:0.875rem;font-weight:600;color:var(--ink-3);transition:background-color .2s var(--ease),color .2s var(--ease)}
+.seg button:focus-visible{outline:2px solid var(--promise);outline-offset:2px}
+.seg button[aria-pressed="true"].y{background:var(--memory);color:oklch(20% 0.03 165)}
+.seg button[aria-pressed="true"].n{background:var(--bg-3);color:var(--ink)}
+.verdict{border:1px solid var(--line);border-radius:16px;padding:var(--s6);background:var(--bg-2);min-height:220px}
+.verdict h3{font-size:1.6rem;line-height:1.2;margin:var(--s3) 0 var(--s4)}
+.verdict p{color:var(--ink-2)}
+.meter{display:flex;gap:6px;margin-top:var(--s5)}
+.meter i{flex:1;height:4px;border-radius:2px;background:var(--line);transition:background-color .3s var(--ease)}
+.meter i.on{background:var(--memory)}
+.invest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s8);align-items:start}
+.price{font-family:var(--serif);font-size:clamp(3.5rem,8vw,6rem);line-height:1;font-weight:400}
+.price small{font-family:var(--sans);font-size:1rem;color:var(--ink-3);margin-left:var(--s2)}
+.inc{margin-top:var(--s5);color:var(--ink-2);max-width:46ch}
+.addon{margin-top:var(--s6);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:var(--s4);align-items:center;padding:var(--s5);border:1px solid var(--line);border-radius:14px;cursor:pointer;transition:border-color .2s var(--ease),background-color .2s var(--ease)}
+.addon:hover{border-color:var(--ink-3)}
+.addon:has(input:checked){border-color:var(--promise-deep);background:var(--bg-2)}
+.addon input{width:20px;height:20px;accent-color:var(--promise)}
+.addon b{display:block;font-weight:600}
+.addon span{font-size:0.9375rem;color:var(--ink-2)}
+.total{margin-top:var(--s5);display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:var(--s4)}
+.total b{font-family:var(--serif);font-size:1.75rem;font-weight:500}
+.terms{margin-top:var(--s5);font-size:0.9375rem;color:var(--ink-2);display:grid;gap:var(--s2)}
+.scale{background:var(--bg-2);border:1px solid var(--line);border-radius:16px;padding:var(--s6)}
+.scale h3{font-size:1.5rem;line-height:1.2;margin-bottom:var(--s3)}
+.scale p{color:var(--ink-2)}
+.slider{margin:var(--s6) 0 var(--s4)}
+.slider label{display:flex;justify-content:space-between;font-size:0.875rem;color:var(--ink-3);margin-bottom:var(--s3)}
+.slider output{font-family:var(--serif);font-size:1.5rem;color:var(--ink)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:32px;background:transparent;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:var(--line)}
+input[type=range]::-moz-range-track{height:2px;background:var(--line)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--promise);margin-top:-10px;border:4px solid var(--bg-2)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--promise);border:4px solid var(--bg-2)}
+.ratio{display:flex;align-items:baseline;gap:var(--s3);margin-top:var(--s4)}
+.ratio b{font-family:var(--serif);font-size:3rem;font-weight:400;color:var(--promise);line-height:1}
+.bar{height:10px;border-radius:5px;background:var(--bg-3);margin-top:var(--s4);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--promise);transform-origin:left;transition:transform .5s var(--ease)}
+.not{display:flex;flex-wrap:wrap;gap:var(--s3)}
+.not span{border:1px solid var(--line);border-radius:999px;padding:var(--s2) var(--s4);color:var(--ink-2);font-size:0.9375rem}
+.not span s{text-decoration-color:var(--ink-3)}
+.faq{border-top:1px solid var(--line);max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:var(--s5) var(--s6) var(--s5) 0;position:relative;font-family:var(--serif);font-size:1.3rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:var(--s5);font-family:var(--sans);color:var(--ink-3);transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg);color:var(--promise)}
+.faq details p{padding:0 0 var(--s5);color:var(--ink-2);max-width:66ch}
+.close{padding:var(--s10) 0 var(--s9);text-align:left}
+.close h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;max-width:18ch;font-weight:400}
+.close p{margin-top:var(--s5);color:var(--ink-2);max-width:52ch;font-size:1.125rem}
+.cap{display:inline-flex;align-items:center;gap:var(--s2);margin-top:var(--s6);font-size:0.875rem;color:var(--ink-2)}
+.cap::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--memory)}
+footer{border-top:1px solid var(--line-soft);padding:var(--s6) 0 var(--s7);font-size:0.8125rem;color:var(--ink-3);display:flex;justify-content:space-between;gap:var(--s5);flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+@media (max-width:1024px){
+  .hero{grid-template-columns:1fr;gap:var(--s7);padding-top:var(--s8)}
+  .map,.fit,.invest,.deliver{grid-template-columns:1fr;gap:var(--s6)}
+  .finding{position:static}
+  .head{grid-template-columns:1fr;gap:var(--s3)}
+}
+@media (max-width:640px){
+  body{font-size:1rem}
+  .wrap{padding:0 var(--s4)}
+  section.block{padding:var(--s8) 0}
+  .prepared{display:none}
+  .row{grid-template-columns:84px minmax(0,1fr) 44px;gap:var(--s3);padding:var(--s3) var(--s1)}
+  .days{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line);margin-left:4px}
+  .day{padding:0 0 var(--s5) var(--s5)}
+  .day::before{top:6px;left:-5px}
+  .dims .inner{grid-template-columns:1fr;padding-left:0}
+  .dims .inner>span{display:none}
+  .dims button{grid-template-columns:40px minmax(0,1fr) 24px}
+  .q{grid-template-columns:1fr}
+}
+@media print{
+  *{transition:none!important;animation:none!important;box-shadow:none!important}
+  body{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  @page{size:A4;margin:14mm}
+  :root{--bg:oklch(99% 0.004 75);--bg-2:oklch(97% 0.006 75);--bg-3:oklch(94% 0.008 75);--line:oklch(84% 0.01 70);--line-soft:oklch(90% 0.008 70);--ink:oklch(22% 0.015 60);--ink-2:oklch(36% 0.015 60);--ink-3:oklch(50% 0.015 60);--promise:oklch(58% 0.12 70);--memory:oklch(52% 0.08 165)}
+  body{font-size:10pt;line-height:1.45}
+  .cta-row,.fit,.faq,#fit,#faq,.slider,.ratio,.bar,.addon,.cap,.btn{display:none!important}
+  .rv{opacity:1!important;transform:none!important}
+  section.block{padding:14pt 0;break-inside:avoid}
+  .hero{padding:18pt 0 10pt;grid-template-columns:1.4fr 1fr;gap:18pt}
+  .hero h1{font-size:30pt}
+  .decision{padding:12pt 0}
+  .decision blockquote{font-size:17pt}
+  .map{grid-template-columns:1.2fr 1fr;gap:18pt}
+  .map .pin{transform:translate(-50%,-50%) scale(1)}
+  .finding{position:static}
+  .dims .body{grid-template-rows:1fr!important}
+  .head{grid-template-columns:1fr;margin-bottom:10pt}
+  .head h2{font-size:15pt}
+  .price{font-size:30pt}
+  .invest{grid-template-columns:1fr 1fr}
+  .close{padding:10pt 0}
+  .close h2{font-size:18pt}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="mark"><b>Arcan Schalier Group</b><span>Belonging practice</span></div>
+    <div class="prepared" id="prepared" hidden>Prepared for <em id="forName"></em></div>
+  </header>
+
+  <section class="hero" aria-labelledby="h1">
+    <div class="rv">
+      <p class="eyebrow">Belonging Lens™</p>
+      <h1 id="h1" style="margin-top:var(--s4)">Most hotels know what they promise. Few know what guests <i>take home.</i></h1>
+      <p class="lede">An external, five-day diagnostic of the distance between your public promise and the experience guests actually remember. One decision, made on evidence.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary js-accept" href="mailto:office@arcanschalier.com">Confirm and reserve a start</a>
+        <a class="btn btn-ghost" href="#map">See a sample finding</a>
+      </div>
+    </div>
+    <dl class="facts rv" style="--d:1">
+      <div class="fact"><dt>Duration</dt><dd class="num">5 working days</dd></div>
+      <div class="fact"><dt>Format</dt><dd>Remote, public sources</dd></div>
+      <div class="fact"><dt>Your time</dt><dd>5 answers + 60 min</dd></div>
+      <div class="fact"><dt>Fee</dt><dd class="num">€3,000</dd></div>
+    </dl>
+  </section>
+</div>
+
+<div class="wrap">
+  <section class="decision rv" aria-label="The decision">
+    <p class="eyebrow" style="margin-bottom:var(--s5)">The decision you are buying</p>
+    <blockquote>What should this hotel <em>protect, clarify or change next</em> to become more recognisable, more memorable and more likely to be chosen again?</blockquote>
+    <p>Before the work begins, we agree the decision the diagnostic must inform. Every score and recommendation is tested against it. Where the evidence cannot support a conclusion, the report says so plainly.</p>
+  </section>
+</div>
+
+<section class="block" id="map" aria-labelledby="map-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">01 · Sensory Gap Map</p>
+      <div>
+        <h2 id="map-h">Where the promise and the memory part ways.</h2>
+        <p>Every Lens report maps seven senses: what your public language promises, and what guests independently recall. Select a sense to read the finding.</p>
+      </div>
+    </div>
+    <div class="map" id="gapmap">
+      <div>
+        <div class="legend"><span><i class="dot p"></i>Promise, from your own channels</span><span><i class="dot m"></i>Memory, from guest language</span></div>
+        <ul class="rows" id="rows" role="list"></ul>
+        <p class="note">Illustrative sample for a 40-room independent hotel. Not a client report.</p>
+      </div>
+      <aside class="finding" aria-live="polite" id="finding"></aside>
+    </div>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="dim-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">02 · Method</p>
+      <div>
+        <h2 id="dim-h">Four readings of one hotel.</h2>
+        <p>Facts, observations, interpretations and recommendations are kept apart throughout, so you always know what is evidence and what is judgement.</p>
+      </div>
+    </div>
+    <ol class="dims" id="dims"></ol>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="del-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">03 · What you receive</p>
+      <div><h2 id="del-h">A decision map, not a pile of observations.</h2></div>
+    </div>
+    <div class="deliver">
+      <ul class="rv">
+        <li><span><b>15-page Belonging Lens™ report</b>, delivered before the debrief so the conversation starts with your reaction.</span></li>
+        <li><span><b>Four dimension scorecards</b> with sources and limitations stated.</span></li>
+        <li><span><b>Sensory Gap Map</b> across scent, sound, light, materials, touch, temperature and taste.</span></li>
+        <li><span><b>Focused comparison</b> with three reference properties you choose.</span></li>
+        <li><span><b>Three to five prioritised actions</b>, each as signal, gap, decision, first move within 30 days, owner.</span></li>
+        <li><span><b>60-minute debrief</b>, included.</span></li>
+      </ul>
+      <div class="confidence rv" style="--d:1">
+        <p class="eyebrow">Decision confidence standard</p>
+        <h3 style="margin-top:var(--s3)">At handover, you can name:</h3>
+        <ol>
+          <li>three evidence-based gaps,</li>
+          <li>one strength worth protecting,</li>
+          <li>one action that can begin within 30 days,</li>
+          <li>one decision that should wait for better evidence.</li>
+        </ol>
+        <p>If the work cannot support those four statements, the report is not doing its job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="days-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">04 · Five days</p>
+      <div><h2 id="days-h">Asynchronous by design. No workshop, no pitch.</h2></div>
+    </div>
+    <div class="days rv">
+      <div class="day hl"><p class="d">Day 0</p><p>Your five answers validated. Research plan fixed against the agreed decision.</p></div>
+      <div class="day"><p class="d">Days 1–2</p><p>Website, booking journey, public channels and a sample of guest reviews.</p></div>
+      <div class="day"><p class="d">Days 3–4</p><p>Coding, scorecards, Sensory Gap Map and report production.</p></div>
+      <div class="day"><p class="d">Day 5</p><p>Quality control and report delivery.</p></div>
+      <div class="day hl"><p class="d">Debrief</p><p>60 minutes, starting from what surprised you.</p></div>
+    </div>
+    <p class="after">The five-day clock starts once the brief is complete. Your time is not used to educate us about your hotel.</p>
+  </div>
+</section>
+
+<section class="block" id="fit" aria-labelledby="fit-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">05 · Fit</p>
+      <div><h2 id="fit-h">Is this the right moment?</h2><p>Four questions. Honest answers save both of us time.</p></div>
+    </div>
+    <div class="fit">
+      <ul class="qs" id="qs"></ul>
+      <div class="verdict" id="verdict" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="invest" aria-labelledby="inv-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">06 · Investment</p>
+      <div><h2 id="inv-h">Fixed scope. Fixed fee. Paid before work begins.</h2></div>
+    </div>
+    <div class="invest">
+      <div class="rv">
+        <p class="price num">€3,000<small>excl. VAT</small></p>
+        <p class="inc">Includes the complete five-day diagnostic, report, Sensory Gap Map and standard 60-minute debrief. Remote, so no travel costs.</p>
+        <label class="addon">
+          <input type="checkbox" id="call">
+          <span><b>Optional Personal Call · €500</b><span>45 minutes online with the founder after the debrief, questions sent in advance, written recap within 24 hours.</span></span>
+          <span class="num" id="callPrice">+€500</span>
+        </label>
+        <div class="total"><span>Total</span><b class="num" id="total">€3,000</b></div>
+        <div class="terms">
+          <p>Following your written acceptance, you receive a pro forma invoice in EUR, payable in full by bank transfer within 7 days. Invoicing is handled by our billing partner, Useme. Reverse charge applies for business clients outside Poland.</p>
+          <p>You receive a non-exclusive licence to use the report internally. The report is confidential. This proposal is valid for 14 days.</p>
+        </div>
+      </div>
+      <div class="scale rv" style="--d:1">
+        <p class="eyebrow">Put it in proportion</p>
+        <h3 style="margin-top:var(--s3)">What is the next decision worth?</h3>
+        <p>A repositioning, a scent programme, a renovated arrival. Lens is the controlled first step before that money moves.</p>
+        <div class="slider">
+          <label for="dec"><span>Budget of the decision Lens informs</span><output id="decOut" class="num">€150,000</output></label>
+          <input type="range" id="dec" min="0" max="100" value="45" aria-describedby="ratioText">
+        </div>
+        <div class="ratio"><b class="num" id="pct">2.0%</b><span id="ratioText">of the decision, spent on knowing whether its signal is real.</span></div>
+        <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" aria-labelledby="not-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">07 · Boundaries</p>
+      <div><h2 id="not-h">What Lens is not.</h2><p>Clear edges are part of the value.</p></div>
+    </div>
+    <div class="not rv">
+      <span><s>A ranking or public rating</s></span><span><s>Mystery shopping</s></span><span><s>An operational audit</s></span><span><s>An SEO report</s></span><span><s>A GDPR or legal review</s></span><span><s>Access to your guest database</s></span><span><s>A guarantee of revenue or ROI</s></span><span><s>Editorial coverage</s></span>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow">08 · Questions</p>
+      <div><h2 id="faq-h">What general managers ask first.</h2></div>
+    </div>
+    <div class="faq rv">
+      <details><summary>We already run guest surveys. What is different?</summary><p>Surveys measure satisfaction with what you asked about. Lens reads what guests volunteer, unprompted, in public: which sensations, people and moments they carry away, and which parts of your promise never appear in their language.</p></details>
+      <details><summary>Why is there no free strategy call?</summary><p>Because the work is designed to run without taking your time. You can buy on the scope alone, and the 60-minute debrief is included. If you want a separate conversation with the founder, the Personal Call exists for exactly that.</p></details>
+      <details><summary>What if the public evidence is thin?</summary><p>The report says so, names the limitation and tells you which decision should wait. We do not fill gaps with assumptions.</p></details>
+      <details><summary>Will this lead to coverage in Escale Privée?</summary><p>No. Belonging Lens is a separate practice of Arcan Schalier Group. Buying it has no effect on editorial decisions, and no commercial client is promised, or denied, coverage.</p></details>
+      <details><summary>We need more than a remote read.</summary><p>Lens is the smallest credible step. When a decision needs on-site observation or team interviews, the natural next step is a deeper engagement, scoped only after the Lens evidence shows it is worth it.</p></details>
+      <details><summary>Who does the work?</summary><p>Łukasz Ogorzałek, founder of Arcan Schalier Group, with a background inside hotel front-of-house operations. Every finding is reviewed and signed off personally.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="close rv" aria-labelledby="close-h">
+    <h2 id="close-h">Reply to confirm. We take it from there.</h2>
+    <p>You receive the pro forma invoice and a five-question brief. Delivery starts once payment is confirmed and the brief is complete.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary js-accept" href="mailto:office@arcanschalier.com">Confirm Belonging Lens</a>
+      <a class="btn btn-ghost js-ask" href="mailto:office@arcanschalier.com">Ask one question first</a>
+    </div>
+    <p class="cap">One diagnostic at a time. Next available start: November 2026, confirmed on acceptance.</p>
+  </section>
+  <footer>
+    <span>Belonging Lens™ is a practice of Arcan Schalier Group, est. 2026. Editorially independent from Escale Privée.</span>
+    <span>office@arcanschalier.com</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var params = new URLSearchParams(location.search);
+  var hotel = (params.get('for') || '').trim().slice(0,80);
+  if(hotel){ document.getElementById('forName').textContent = hotel; document.getElementById('prepared').hidden = false; document.title = 'Belonging Lens™ for ' + hotel + ' · Arcan Schalier Group'; }
+
+  var senses = [
+    {k:'Scent', p:88, m:41, h:'Named everywhere, remembered rarely.', s:'A signature scent appears on every page of the website and in the booking confirmation.', g:'It surfaces in 3 of 120 recent reviews. Guests recall the staff by name far more often than the air.', d:'Decide whether scent is identity or amenity, and fund it accordingly.', f:'Carry the scent into one departure touchpoint for 30 days, then re-read reviews.'},
+    {k:'Sound', p:52, m:74, h:'The silence does the selling.', s:'The website barely mentions quiet.', g:'Guests describe the silence more vividly than any facility.', d:'Name what already works before investing in what does not.', f:'Add one sentence about sound to the booking journey.'},
+    {k:'Light', p:76, m:58, h:'Photographed well, lived partially.', s:'Golden-hour imagery dominates every channel.', g:'Guests praise daylight in public rooms, but describe bedrooms as dim at night.', d:'Protect the public-room light story; review bedroom evening lighting.', f:'Audit three room types after dark.'},
+    {k:'Materials', p:82, m:33, h:'The craft is invisible to the guest.', s:'Local stone and linen are central to the brand story.', g:'Almost no guest language mentions texture or origin.', d:'Decide whether materials should be explained or left silent.', f:'Test one bedside card on provenance for a month.'},
+    {k:'Touch', p:56, m:49, h:'Aligned, and quietly so.', s:'Touch is implied through spa and bedding language.', g:'Guests mention bed comfort at roughly the rate the promise suggests.', d:'No change needed. Keep as a supporting signal.', f:'None. Monitor only.'},
+    {k:'Temperature', p:38, m:67, h:'An unclaimed strength.', s:'Warmth and climate are absent from your own language.', g:'Guests repeatedly remember the fire in the lounge and a warm arrival.', d:'Consider claiming warmth as part of the arrival promise.', f:'Brief the front desk on one warm-arrival gesture.'},
+    {k:'Taste', p:70, m:73, h:'Promise and memory agree.', s:'Breakfast and local produce are described with care.', g:'Guests describe the same dishes, often by name.', d:'Protect it. This is a signature, not a gap.', f:'Keep the dishes guests name on the menu next season.'}
+  ];
+  var rows = document.getElementById('rows'), finding = document.getElementById('finding'), map = document.getElementById('gapmap');
+  senses.forEach(function(x,i){
+    var gap = Math.abs(x.p - x.m), lo = Math.min(x.p,x.m);
+    var li = document.createElement('li');
+    li.innerHTML = '<button class="row" type="button" aria-pressed="false" data-i="'+i+'"><span class="label">'+x.k+'</span><span class="track" aria-hidden="true"><span class="span" style="left:'+lo+'%;width:'+gap+'%"></span><span class="pin p" style="left:'+x.p+'%"></span><span class="pin m" style="left:'+x.m+'%"></span></span><span class="gapv num'+(gap>=30?' big':'')+'">'+(x.m>=x.p?'+':'−')+gap+'</span></button>';
+    rows.appendChild(li);
+  });
+  function show(i){
+    var x = senses[i];
+    rows.querySelectorAll('.row').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.i == i ? 'true':'false'); });
+    finding.innerHTML = '<div class="swap"><p class="eyebrow">Sample finding · '+x.k+'</p><h3>'+x.h+'</h3><dl><div><dt>Signal</dt><dd>'+x.s+'</dd></div><div><dt>Gap</dt><dd>'+x.g+'</dd></div><div><dt>Decision</dt><dd>'+x.d+'</dd></div><div><dt>First move, within 30 days</dt><dd class="move">'+x.f+'</dd></div></dl></div>';
+  }
+  rows.addEventListener('click', function(e){ var b = e.target.closest('.row'); if(b) show(+b.dataset.i); });
+  show(0);
+
+  var dims = [
+    ['Digital sensory language','How your website, booking journey and public channels communicate atmosphere, place and sensory identity.','Where your own words create expectation, and where they stay generic.'],
+    ['Guest recognition signals','How guests describe being noticed, remembered and welcomed back as people rather than transactions.','Which recognition moments exist, who carries them and where they depend on one person.'],
+    ['Sensory identity','Recurring signals around scent, sound, light, materials, touch, temperature and taste.','Which senses are signature, which support, and which are noise.'],
+    ['Belonging & return intent','Evidence of emotional recall, attachment and intention to return in unprompted guest language.','How strong the pull back is, and what it is attached to.']
+  ];
+  var ol = document.getElementById('dims');
+  dims.forEach(function(d,i){
+    var li = document.createElement('li');
+    li.innerHTML = '<button type="button" aria-expanded="false" aria-controls="dim'+i+'"><span class="n num">0'+(i+1)+'</span><span class="t">'+d[0]+'</span><span class="plus" aria-hidden="true">+</span></button><div class="body" id="dim'+i+'"><div><div class="inner"><span></span><div><h4>What we read</h4><p>'+d[1]+'</p></div><div><h4>What you learn</h4><p>'+d[2]+'</p></div></div></div></div>';
+    ol.appendChild(li);
+  });
+  ol.addEventListener('click', function(e){ var b = e.target.closest('button'); if(!b) return; var li = b.parentElement, open = !li.classList.contains('open'); li.classList.toggle('open', open); b.setAttribute('aria-expanded', open); });
+  ol.firstElementChild.classList.add('open'); ol.firstElementChild.querySelector('button').setAttribute('aria-expanded','true');
+
+  var qs = ['A decision on guest experience, positioning or sensory investment is coming within 12 months.','The property has an identity beyond its amenities.','Someone on your side will own the next action.','A public-source reading, without guest data, is acceptable to you.'];
+  var ans = [null,null,null,null], qEl = document.getElementById('qs'), verdict = document.getElementById('verdict');
+  qs.forEach(function(q,i){
+    var li = document.createElement('li'); li.className = 'q';
+    li.innerHTML = '<span>'+q+'</span><span class="seg" role="group" aria-label="Answer"><button type="button" class="y" aria-pressed="false" data-i="'+i+'" data-v="1">Yes</button><button type="button" class="n" aria-pressed="false" data-i="'+i+'" data-v="0">Not yet</button></span>';
+    qEl.appendChild(li);
+  });
+  function renderVerdict(){
+    var done = ans.filter(function(a){return a!==null}).length, yes = ans.filter(function(a){return a===1}).length;
+    var meter = '<div class="meter">'+ans.map(function(a){return '<i class="'+(a===1?'on':'')+'"></i>'}).join('')+'</div>';
+    var t, p;
+    if(done < 4){ t = 'Answer all four.'; p = done ? (4-done)+' to go. There is no wrong answer.' : 'Your answers stay on this page.'; }
+    else if(yes === 4){ t = 'Lens fits, and the timing is right.'; p = 'Reply to confirm and we send the pro forma invoice and the five-question brief.'; }
+    else if(yes === 3){ t = 'A good fit, with one open point.'; p = 'Mention the "not yet" in your reply. We will tell you honestly whether it changes the value of the work.'; }
+    else if(ans[0] === 0){ t = 'Probably not yet.'; p = 'Without a decision in the next year, the report would be interesting rather than useful. Keep this page; the offer stands when the moment comes.'; }
+    else { t = 'Not the right step yet.'; p = 'Lens works best when there is a decision to inform and someone to own it. Reply anyway if you think we have read the situation wrongly.'; }
+    verdict.innerHTML = '<p class="eyebrow">'+yes+' of 4</p><h3>'+t+'</h3><p>'+p+'</p>'+meter;
+  }
+  qEl.addEventListener('click', function(e){ var b = e.target.closest('button'); if(!b) return; var i = +b.dataset.i; ans[i] = +b.dataset.v; b.parentElement.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); }); renderVerdict(); });
+  renderVerdict();
+
+  var fmt = function(n){ return '€' + n.toLocaleString('en-GB'); };
+  var call = document.getElementById('call'), total = document.getElementById('total');
+  function tot(){ total.textContent = fmt(call.checked ? 3500 : 3000); updateMail(); }
+  call.addEventListener('change', tot);
+  var dec = document.getElementById('dec'), out = document.getElementById('decOut'), pct = document.getElementById('pct'), fill = document.getElementById('barFill');
+  function decVal(v){ var min = Math.log(25000), max = Math.log(2000000); var raw = Math.exp(min + (max-min)*v/100); var step = raw < 100000 ? 5000 : raw < 500000 ? 25000 : 100000; return Math.round(raw/step)*step; }
+  function upd(){ var d = decVal(+dec.value); out.textContent = fmt(d); var r = 3000/d*100; pct.textContent = (r >= 1 ? r.toFixed(1) : r.toFixed(2)) + '%'; fill.style.transform = 'scaleX(' + Math.min(1, Math.max(0.01, r/12)) + ')'; }
+  dec.addEventListener('input', upd); upd();
+
+  function updateMail(){
+    var name = hotel || '[hotel name]';
+    var subj = 'Belonging Lens: ' + name;
+    var body = 'Dear Łukasz,\n\nWe would like to proceed with Belonging Lens for ' + name + '.\nPersonal Call: ' + (call.checked ? 'yes' : 'no') + '.\nInvoice details: \n\nKind regards,\n';
+    document.querySelectorAll('.js-accept').forEach(function(a){ a.href = 'mailto:office@arcanschalier.com?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body); });
+    document.querySelectorAll('.js-ask').forEach(function(a){ a.href = 'mailto:office@arcanschalier.com?subject=' + encodeURIComponent('Question about Belonging Lens: ' + name); });
+  }
+  updateMail();
+
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, {threshold:0.12}) : null;
+  document.querySelectorAll('.rv').forEach(function(el){ var d = +getComputedStyle(el).getPropertyValue('--d') || 0; el.style.transitionDelay = (d*120)+'ms'; io ? io.observe(el) : el.classList.add('in'); });
+  var mo = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ if(es[0].isIntersecting){ map.classList.add('live'); mo.disconnect(); } }, {threshold:0.3}) : null;
+  mo ? mo.observe(map) : map.classList.add('live');
+  window.addEventListener('beforeprint', function(){ map.classList.add('live'); document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); });
+})();
+</script>
+</body>
+</html>
